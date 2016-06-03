@@ -1,13 +1,14 @@
 from splinter import Browser
 
 browser = Browser()
-browser.visit('http://google.com')
-browser.fill('q', 'splinter - python acceptance testing for web applications')
-browser.find_by_name('btnG').click()
+browser.visit('http://127.0.0.1:8000/admin/')
+browser.fill('username', 'teste_1234')
+browser.fill('password', '1234')
+browser.find_by_value('Log in').click()
 
-if browser.is_text_present('splinter'):
-    print "Yes, found something!"
+if browser.is_text_present('My Actions'):
+    print "Logged"
 else:
-    print "No, it wasn't found... We need to improve our SEO techniques"
+    print "Could not access"
 
 browser.quit()
