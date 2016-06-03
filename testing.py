@@ -6,7 +6,7 @@ browser.fill('q', 'splinter - python acceptance testing for web applications')
 browser.find_by_name('btnG').click()
 
 if browser.is_text_present('splinter'):
-    print "Yes, the official website was found!"
+    print "Yes, found something!"
 else:
     print "No, it wasn't found... We need to improve our SEO techniques"
 
